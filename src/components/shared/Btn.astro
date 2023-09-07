@@ -1,0 +1,20 @@
+---
+// Pass props to reuse Btn in different places
+const { href, size, target } = Astro.props;
+
+//Refactor to use Tailwind for all styles
+---
+
+<a
+  href={href}
+  class="btn relative inline-block w-[88px] h-[88px] rounded-[88px] border-solid border border-white after:absolute after:top-0 after:bottom-0 after:right-0 after:m-auto after:w-[88px] after:h-[88px] after:duration-150"
+  ><slot /></a
+>
+
+<style lang="scss">
+  .btn {
+    &::after {
+      background: url(/src/assets/images/common/arrow.svg) center/40% no-repeat;
+    }
+  }
+</style>

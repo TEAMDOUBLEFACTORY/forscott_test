@@ -1,0 +1,72 @@
+---
+import Btn from "../../shared/Btn.astro";
+import Concept from "../concept/Concept.astro";
+import Card from "./Card.astro";
+---
+
+<section class="font-bold workSection pb-[180px]">
+  <div class="container m-auto">
+    <div class="mb-16 titleBox">
+      <h2 class="mb-8 text-6xl tracking-tighter text-center en cond">
+        CRAFT WORK
+      </h2>
+      <p class="text-3xl text-center">
+        丹精込めて作る、それが私たちのやり方です。
+      </p>
+    </div>
+    <div class="box">
+      <ul class="grid grid-cols-3 gap-8 mb-16 workList">
+        <Card
+          href="/"
+          alt=""
+          title="感染症対策全般の運用"
+          services={["WEBサイト", "動画", "コンサルティング"]}
+        />
+        <Card
+          href="/"
+          alt=""
+          title="感染症対策全般の運用"
+          services={["WEBサイト", "動画", "コンサルティング"]}
+        />
+        <Card
+          href="/"
+          alt=""
+          title="感染症対策全般の運用"
+          services={["WEBサイト", "動画", "コンサルティング"]}
+        />
+        <Card
+          href="/"
+          alt=""
+          title="感染症対策全般の運用"
+          services={["WEBサイト", "動画", "コンサルティング"]}
+        />
+        <Card
+          href="/"
+          alt=""
+          title="感染症対策全般の運用"
+          services={["WEBサイト", "動画", "コンサルティング"]}
+        />
+        <Card
+          href="/"
+          alt=""
+          title="感染症対策全般の運用"
+          services={["WEBサイト", "動画", "コンサルティング"]}
+        />
+      </ul>
+    </div>
+    <div class="text-center">
+      <Btn />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  /* Keep styling related to component in component folder */
+  .workSection {
+    .workList > li {
+      .imgBox {
+        background: #fff;
+      }
+    }
+  }
+</style>

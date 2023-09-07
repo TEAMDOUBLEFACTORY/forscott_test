@@ -1,0 +1,94 @@
+---
+import Member from "./Member.astro";
+
+import Member1 from "../../../assets/images/pages/index/member01.jpg";
+import Member2 from "../../../assets/images/pages/index/member02.jpg";
+import Member3 from "../../../assets/images/pages/index/member03.jpg";
+---
+
+<section class="font-bold teamSection pb-[360px]">
+  <div class="container m-auto">
+    <div class="mb-16 titleBox">
+      <h2 class="mb-8 text-4xl tracking-tighter en cond">TEAM</h2>
+    </div>
+  </div>
+  <div class="box">
+    <div class="swiper rightContainer">
+      <ul class="teamList swiper-wrapper">
+        <Member
+          href="/"
+          img={Member1}
+          alt=""
+          nameJa="今井 美奈"
+          nameEn="Mina Imai"
+          role="クリエイティブディレクター"
+        >
+          <p>
+            1972年大阪生まれ。大阪芸術大学中退後、デザイン会社数社を経て2001年からフリーランス。2009年、潟沼裕平と共にbalance設立。
+          </p>
+        </Member>
+        <Member
+          href="/"
+          img={Member2}
+          alt=""
+          nameJa="今井 美奈"
+          nameEn="Mina Imai"
+          role="クリエイティブディレクター"
+        >
+          <p>
+            1972年大阪生まれ。大阪芸術大学中退後、デザイン会社数社を経て2001年からフリーランス。2009年、潟沼裕平と共にbalance設立。
+          </p>
+        </Member>
+        <Member
+          href="/"
+          img={Member3}
+          alt=""
+          nameJa="今井 美奈"
+          nameEn="Mina Imai"
+          role="クリエイティブディレクター"
+        >
+          <p>
+            1972年大阪生まれ。大阪芸術大学中退後、デザイン会社数社を経て2001年からフリーランス。2009年、潟沼裕平と共にbalance設立。
+          </p>
+        </Member>
+        <Member
+          href="/"
+          img={Member1}
+          alt=""
+          nameJa="今井 美奈"
+          nameEn="Mina Imai"
+          role="クリエイティブディレクター"
+        >
+          <p>
+            1972年大阪生まれ。大阪芸術大学中退後、デザイン会社数社を経て2001年からフリーランス。2009年、潟沼裕平と共にbalance設立。
+          </p>
+        </Member>
+      </ul>
+    </div>
+  </div>
+</section>
+<style lang="scss">
+  .rightContainer {
+    padding-left: 5%;
+  }
+  @media (min-width: 1536px) {
+    .rightContainer {
+      padding-left: calc((110vw - 1300px) / 2);
+    }
+  }
+</style>
+<script>
+  import Swiper from "swiper";
+  import { Navigation, Pagination } from "swiper/modules";
+  // import Swiper and modules styles
+  import "swiper/css";
+  import "swiper/css/navigation";
+  import "swiper/css/pagination";
+
+  // init Swiper:
+  const swiper = new Swiper(".swiper", {
+    modules: [Navigation, Pagination],
+    slidesPerView: 2.5,
+    spaceBetween: 35,
+  });
+</script>

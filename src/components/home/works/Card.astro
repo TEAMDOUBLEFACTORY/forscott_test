@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+const { href, img, alt, title, services } = Astro.props;
+---
+
+<li class="work">
+  <a href={href}>
+    <div class="my-10 imgBox aspect-square rounded-3xl">
+      {
+        img ? (
+          <Image src={img} alt={alt} width={img.width} height={img.height} />
+        ) : (
+          <div class="h-full w-full bg-white rounded-3xl" />
+        )
+      }
+    </div>
+    <h3 class="mb-4 text-xl title">{title}</h3>
+    <ul class="tagList grid grid-flow-col gap-0.5 w-max text-sm">
+      {
+        services.map((service) => {
+          return <li class="tag">{service}</li>;
+        })
+      }
+    </ul>
+  </a>
+</li>
+<style lang="scss">
+  .tagList li:not(:last-child):after {
+    content: "/";
+    display: inline-block;
+    padding: 0 3px;
+  }
+</style>

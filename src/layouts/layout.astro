@@ -1,0 +1,110 @@
+---
+//SEO METADATA
+const { title, description } = Astro.props;
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="title" content={title} />
+    <script
+      src="https://kit.fontawesome.com/46f4177606.js"
+      crossorigin="anonymous"></script>
+    <script
+      type="text/javascript"
+      src="//typesquare.com/3/tsst/script/ja/typesquare.js?keKTd8lPfBI%3D"
+      charset="utf-8"></script>
+  </head>
+  <body class="bg-black font-body">
+    <Header />
+    <main class="pb-[400px] text-white">
+      <slot />
+    </main>
+    <Footer />
+    <style lang="scss" is:global>
+      :root {
+        --en-font: "Moderat";
+        --encond-font: "Moderat Condensed";
+        --ja-font: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI",
+          "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium",
+          "Yu Gothic", Verdana, Meiryo, sans-serif;
+      }
+
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        margin: 0 auto;
+        scroll-behavior: smooth;
+      }
+      @font-face {
+        font-family: "Moderat";
+        src: url("/fonts/Moderat-Regular.ttf") format("ttf");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Moderat";
+        src: url("/fonts/Moderat-Thin.ttf") format("ttf");
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Moderat";
+        src: url("/fonts/Moderat-Bold.ttf") format("ttf");
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Moderat";
+        src: url("/fonts/Moderat-Black.ttf") format("ttf");
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Moderat";
+        src: url("/fonts/Moderat-Black-Italic.ttf") format("ttf");
+        font-weight: 900;
+        font-style: italic;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Moderat Condensed";
+        src: url("/fonts/Moderat-Condensed-Bold.ttf") format("ttf");
+        font-weight: 700;
+        font-style: normal;
+        font-stretch: condensed;
+        font-display: swap;
+      }
+      .en {
+        font-family: var(--en-font);
+      }
+      .cond {
+        font-family: var(--encond-font);
+      }
+      .ja {
+        font-family: var(--ja-font);
+      }
+      section {
+        overflow: hidden;
+      }
+    </style></body
+  >
+</html>

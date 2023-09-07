@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+const { href, img, alt, date, title, services } = Astro.props;
+---
+
+<li class="blog swiper-slide">
+  <a href={href}>
+    <div class="imgBox mb-8">
+      {
+        img ? (
+          <Image
+            src={img}
+            alt={alt}
+            width={img.width}
+            height={img.height}
+            class="aspect-[229/140] object-cover"
+          />
+        ) : (
+          <div class="h-full w-full bg-white rounded-3xl" />
+        )
+      }
+    </div>
+    <p class="opacity-30 mb-3 text-xl en cond">{date}</p>
+    <h3 class="text-2xl title mb-5">{title}</h3>
+    <ul class="tagList grid grid-flow-col gap-6 w-max text-sm opacity-30">
+      {
+        services.map((service) => {
+          return <li class="tag">{service}</li>;
+        })
+      }
+    </ul>
+  </a>
+</li>

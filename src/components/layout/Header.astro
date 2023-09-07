@@ -1,0 +1,70 @@
+---
+const { heading } = Astro.props;
+
+const menuItems = [
+  {
+    title: 'company',
+    href: '/',
+  },
+  {
+    title: 'services',
+    href: '/',
+  },
+  {
+    title: 'works',
+    href: '/',
+  },
+  {
+    title: 'product',
+    href: '/',
+  },
+  {
+    title: 'recruit',
+    href: '/',
+  },
+  {
+    title: 'contact',
+    href: '/',
+  },
+];
+---
+
+<header class="header text-white font-bold">
+  <div
+    class="header__container px-[70px] py-[50px] flex items-center justify-between"
+  >
+    <div class="left">
+      <!-- Use h1 tag for page heading, better for SEO-->
+      <a href="" class="max-w-[150px]">
+        <img
+          src="/src/assets/images/common/logo.svg"
+          alt="Double Factory | {heading}"
+        />
+      </a>
+    </div>
+    <div class="right flex items-center gap-14">
+      <nav>
+        <ul class="grid grid-flow-col gap-12 en font-black text-xl">
+          <!-- Use map to make styles changes easier in future  -->
+          {
+            menuItems.map((item) => {
+              return (
+                <li>
+                  <a class="uppercase" href={item.href}>
+                    {item.title}
+                  </a>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </nav>
+      <a href="" target="_blank"
+        ><img
+          src="/src/assets/images/common/instagram.svg"
+          alt="Instagram"
+        /></a
+      >
+    </div>
+  </div>
+</header>

@@ -1,0 +1,95 @@
+---
+import Btn from "../../shared/Btn.astro";
+import Card from "./Card.astro";
+import Banner1 from "../../../assets/images/pages/index/banner01.jpg";
+import Banner2 from "../../../assets/images/pages/index/banner02.jpg";
+import Banner3 from "../../../assets/images/pages/index/banner03.jpg";
+---
+
+<section class="font-bold blogSection pb-[180px]">
+  <div class="container rightContainer flex">
+    <div class="left flex flex-col shrink-0 justify-between w-1/5">
+      <div class="mb-16 titleBox">
+        <h2 class="mb-8 text-4xl tracking-tighter en cond">BLOG</h2>
+      </div>
+      <Btn />
+    </div>
+    <div class="right w-4/5">
+      <div class="box">
+        <div class="swiper">
+          <ul class="blogList swiper-wrapper">
+            <Card
+              alt="パーパスとは？注目された理由や策定手順・ポイントを徹底解説！"
+              href="/"
+              alt=""
+              img={Banner1}
+              date="2023.05.30"
+              title="パーパスとは？注目された理由や策定手順・ポイントを徹底解説！"
+              services={["パーパス", "パーパス", "パーパス"]}
+            />
+            <Card
+              alt="パーパスとは？注目された理由や策定手順・ポイントを徹底解説！"
+              href="/"
+              alt=""
+              img={Banner2}
+              date="2023.05.30"
+              title="パーパスとは？注目された理由や策定手順・ポイントを徹底解説！"
+              services={["パーパス", "パーパス", "パーパス"]}
+            />
+            <Card
+              alt="パーパスとは？注目された理由や策定手順・ポイントを徹底解説！"
+              href="/"
+              alt=""
+              img={Banner3}
+              date="2023.05.30"
+              title="パーパスとは？注目された理由や策定手順・ポイントを徹底解説！"
+              services={["パーパス", "パーパス", "パーパス"]}
+            />
+            <Card
+              alt="パーパスとは？注目された理由や策定手順・ポイントを徹底解説！"
+              href="/"
+              alt=""
+              img={Banner1}
+              date="2023.05.30"
+              title="パーパスとは？注目された理由や策定手順・ポイントを徹底解説！"
+              services={["パーパス", "パーパス", "パーパス"]}
+            />
+            <Card
+              alt="パーパスとは？注目された理由や策定手順・ポイントを徹底解説！"
+              href="/"
+              alt=""
+              img={Banner2}
+              date="2023.05.30"
+              title="パーパスとは？注目された理由や策定手順・ポイントを徹底解説！"
+              services={["パーパス", "パーパス", "パーパス"]}
+            />
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style lang="scss">
+  @media (min-width: 1536px) {
+    .rightContainer {
+      margin-left: calc((100vw - 1300px) / 2);
+      max-width: 100% !important;
+    }
+  }
+</style>
+
+<script>
+  import Swiper from "swiper";
+  import { Navigation, Pagination } from "swiper/modules";
+  // import Swiper and modules styles
+  import "swiper/css";
+  import "swiper/css/navigation";
+  import "swiper/css/pagination";
+
+  // init Swiper:
+  const swiper = new Swiper(".swiper", {
+    modules: [Navigation, Pagination],
+    slidesPerView: 2.5,
+    spaceBetween: 35,
+  });
+</script>
